@@ -1,40 +1,47 @@
-import React from 'react';
+'use client';
 import Link from 'next/link';
+import React, { useState } from 'react';
+import { TbMenu2 } from 'react-icons/tb';
+import { IoClose } from 'react-icons/io5';
+import { Constants } from '@/constants/constants';
 
 import '../styles/globals.css';
 
 const Navbar = () => {
+  const [selected, setSelected] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const _handleClick = (item) => () => {
+    setSelected(item);
+    setIsMenuOpen(false);
+  };
   return (
-    <div className="nav-container">
-      <div className="logo-container">
+    <nav className="nav-container">
+      <div className="logo-sub-container">
         <Link href="/" className="logo">
-          Mayank
-          <span className="portfolio-text">Kumawat</span>
+          Mayank<span className="portfolio-text">Kumawat</span>
         </Link>
-      </div>
-      <div className="links-container">
-        <div>
-          <Link href="/" className="links">
-            About me
-          </Link>
+        <div className="menu-icon" onClick={handleMenu}>
+          {isMenuOpen ? (
+            <IoClose size={'1.5rem'} strokeWidth={2} />
+          ) : (
+            <TbMenu2 strokeWidth={2} size={'1.5rem'} />
+          )}
         </div>
-        <div>
-          <Link href="/" className="links">
-            Resume
-          </Link>
-        </div>
-        <div>
-          <Link href="/" className="links">
-            Works
-          </Link>
-        </div>
-        <div>
-          <Link href="/" className="links">
-            Contact
-          </Link>
+        <div className={`links-container ${isMenuOpen ? 'open' : ''}`}>
+          {Constants.NAVBAR_LINKS.map((item, i) => (
+            <Link
+              href={`/${item}`}
+              key={`${item}${i}`}
+              onClick={_handleClick(item)}
+              className={`links ${selected === item && 'selected'}`}
+            >
+              {item}
+            </Link>
+          ))}
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

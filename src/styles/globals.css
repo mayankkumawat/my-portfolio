@@ -28,23 +28,27 @@ li {
 .main-container {
   width: 100%;
   height: 100vh;
-  padding: 2rem 2rem;
+  padding: 3rem 3rem;
   border-radius: 2rem;
   background-color: #f6f1f1;
 }
 
 .nav-container {
-  display: flex;
   align-items: center;
   border-radius: 5rem;
-  background-color: #ffffff;
   padding: 0.6rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-sub-container {
+  display: flex;
   justify-content: space-between;
 }
 
 .nav-container .logo {
   color: #000;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   font-family: var(--font-poppins);
 }
@@ -67,10 +71,80 @@ li {
   font-family: var(--font-cabin);
 }
 
-/* media queries */
+.nav-container .links-container .links.selected {
+  color: #000;
+}
+
+.nav-container .links-container .links:hover {
+  color: #000;
+  transition: color 0.5s ease;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Media Queries */
+
+/* media queries tablet */
 @media screen and (max-width: 768px) {
   body {
     width: 100%;
-    padding: 0 2rem;
+  }
+}
+
+/* media queries laptop */
+@media screen and (max-width: 1024px) {
+  .links-container {
+    display: none !important;
+  }
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-2rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .links-container.open {
+    display: flex !important;
+    position: absolute;
+    top: 4rem;
+    background: white;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 0.5rem;
+    border-radius: 1rem;
+    animation: slide-down 0.3s ease;
+  }
+  .logo-sub-container {
+    position: relative;
+  }
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* media queries mobile */
+@media screen and (max-width: 425px) {
+  body {
+    width: 100%;
+    padding: 0 0;
+  }
+  .main-container {
+    border-radius: 0;
+    padding: 0 0;
+  }
+  .nav-container {
+    border-radius: 0;
   }
 }
