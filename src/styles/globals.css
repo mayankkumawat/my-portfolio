@@ -34,7 +34,6 @@ li {
 }
 
 .nav-container {
-  align-items: center;
   border-radius: 5rem;
   padding: 0.6rem 2rem;
   background-color: #ffffff;
@@ -44,12 +43,13 @@ li {
 .logo-sub-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-container .logo {
   color: #000;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 600;
   font-family: var(--font-poppins);
 }
 
