@@ -181,6 +181,18 @@ li {
 @media screen and (max-width: 768px) {
   body {
     width: 100%;
+    padding: 0 0;
+  }
+  .main-container {
+    border-radius: 0;
+    padding: 0 0;
+  }
+  .nav-container {
+    border-radius: 0;
+  }
+  .info {
+    width: 80%;
+    margin-top: 2rem;
   }
 }
 
@@ -246,5 +258,20 @@ li {
   }
   .nav-container {
     border-radius: 0;
+  }
+  .info {
+    width: 80%;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  body {
+    width: 100%;
+    padding: 0 0;
+  }
+  .info {
+    width: 80%;
+    margin-top: 2rem;
   }
 }
