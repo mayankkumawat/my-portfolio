@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { cabin } from '@/styles/fonts';
 import React, { useState } from 'react';
 import { TbMenu2 } from 'react-icons/tb';
 import { IoClose } from 'react-icons/io5';
@@ -28,13 +29,15 @@ const Navbar = () => {
             <TbMenu2 strokeWidth={2} size={'1.5rem'} />
           )}
         </div>
-        <div className={`links-container ${isMenuOpen ? 'open' : ''}`}>
+        <div className={`links-container ${isMenuOpen ? 'open' : ''} `}>
           {Constants.NAVBAR_LINKS.map((item, i) => (
             <Link
               href={`/${item}`}
               key={`${item}${i}`}
               onClick={_handleClick(item)}
-              className={`links ${selected === item && 'selected'}`}
+              className={`links ${selected === item && 'selected'} ${
+                cabin.className
+              }`}
             >
               {item}
             </Link>
