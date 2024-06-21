@@ -197,9 +197,23 @@ li {
 
 .work-container {
   display: grid;
-  row-gap: 50px;
+  row-gap: 2rem;
+  column-gap: 3rem;
   margin-top: 2rem;
   grid-template-columns: auto auto;
+}
+
+.work-item {
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.work-title {
+  color: #000;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: var(--font-poppins);
 }
 
 /* Media Queries */
