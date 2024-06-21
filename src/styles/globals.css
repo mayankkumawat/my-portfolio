@@ -146,11 +146,11 @@ li {
 }
 
 .btn {
-  border-width: 0.1rem;
-  border-color: #0088ff;
   border-style: solid;
-  padding: 0.5rem 1.2rem;
+  border-width: 0.1rem;
   border-radius: 10rem;
+  border-color: #0088ff;
+  padding: 0.5rem 1.2rem;
 }
 
 .btn:hover {
@@ -176,8 +176,10 @@ li {
 }
 
 /* offer section styles */
+
 .offer-container {
   margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 .title {
@@ -187,10 +189,18 @@ li {
   font-family: var(--font-poppins);
 }
 
+.small-under-line {
+  width: 6rem;
+  height: 0.15rem;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  background-color: #0088ff;
+}
+
 .under-line {
-  width: 11%;
-  height: 0.2rem;
-  margin-top: 0.5rem;
+  width: 8rem;
+  height: 0.15rem;
+  margin-top: 0.2rem;
   border-radius: 10px;
   background-color: #000;
 }
@@ -198,7 +208,7 @@ li {
 .work-container {
   display: grid;
   row-gap: 2rem;
-  column-gap: 3rem;
+  column-gap: 5rem;
   margin-top: 2rem;
   grid-template-columns: auto auto;
 }
@@ -210,10 +220,18 @@ li {
 }
 
 .work-title {
+  margin-top: -0.3rem;
   color: #000;
   font-weight: 500;
   font-size: 1rem;
   font-family: var(--font-poppins);
+}
+
+.work-description {
+  color: #636c72;
+  font-size: 0.8rem;
+  font-family: var(--font-poppins);
+  text-align: justify;
 }
 
 /* Media Queries */
@@ -232,8 +250,15 @@ li {
     border-radius: 0;
   }
   .info {
-    width: 80%;
+    width: 80% !important;
     margin-top: 2rem;
+  }
+  .offer-container {
+    padding: 10%;
+    margin-top: -1rem !important;
+  }
+  .work-container {
+    grid-template-columns: auto;
   }
 }
 
@@ -285,6 +310,9 @@ li {
     flex-direction: column;
     gap: 1rem;
   }
+  .offer-container {
+    margin-top: 5rem;
+  }
 }
 
 /* media queries mobile */
@@ -304,6 +332,13 @@ li {
     width: 80%;
     margin-top: 2rem;
   }
+  .offer-container {
+    padding: 10%;
+    margin-top: 2rem;
+  }
+  .work-container {
+    grid-template-columns: auto;
+  }
 }
 
 @media (min-width: 425px) and (max-width: 767px) {
@@ -314,5 +349,12 @@ li {
   .info {
     width: 80%;
     margin-top: 2rem;
+  }
+  .offer-container {
+    padding: 10%;
+    margin-top: 2rem;
+  }
+  .work-container {
+    grid-template-columns: auto;
   }
 }
