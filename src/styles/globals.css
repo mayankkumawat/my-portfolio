@@ -175,6 +175,33 @@ li {
   transition: color 0.3s ease;
 }
 
+/* offer section styles */
+.offer-container {
+  margin-top: 5rem;
+}
+
+.title {
+  color: #000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--font-poppins);
+}
+
+.under-line {
+  width: 11%;
+  height: 0.2rem;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.work-container {
+  display: grid;
+  row-gap: 50px;
+  margin-top: 2rem;
+  grid-template-columns: auto auto;
+}
+
 /* Media Queries */
 
 /* media queries tablet */
