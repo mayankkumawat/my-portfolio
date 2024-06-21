@@ -53,7 +53,12 @@ const WORK_INFO = [
   },
 ];
 
+const LINKS = {
+  github: 'https://github.com/mayankkumawat',
+};
+
 export const Constants = {
+  LINKS,
   WORK_INFO,
   NAVBAR_LINKS,
 };

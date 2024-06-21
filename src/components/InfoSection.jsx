@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { cabin } from '@/styles/fonts';
 import TypeWriter from '@/components/TypeWriter';
+import { Constants } from '@/constants/constants';
 
 import profilePic from '../assets/profilepic.jpeg';
 
@@ -41,7 +42,13 @@ const InfoSection = () => {
             <p className={`info-btn ${cabin.className}`}>Contact</p>
           </div>
           <div className="btn">
-            <p className={`info-btn ${cabin.className}`}>Github</p>
+            <a
+              target="_blank"
+              href={Constants.LINKS.github}
+              className={`info-btn ${cabin.className}`}
+            >
+              Github
+            </a>
           </div>
         </div>
       </div>
