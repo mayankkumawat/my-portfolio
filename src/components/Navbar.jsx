@@ -19,8 +19,9 @@ const Navbar = () => {
   return (
     <nav className="nav-container">
       <div className="logo-sub-container">
-        <Link href="/" className="logo">
-          Mayank<span className="portfolio-text">Kumawat</span>
+        <Link href="/" className={`logo ${cabin.className}`}>
+          Mayank
+          <span className={`portfolio-text ${cabin.className}`}>Kumawat</span>
         </Link>
         <div className="menu-icon" onClick={handleMenu}>
           {isMenuOpen ? (
