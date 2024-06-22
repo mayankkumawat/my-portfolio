@@ -151,9 +151,13 @@ li {
   border-radius: 10rem;
   border-color: #0088ff;
   padding: 0.5rem 1.2rem;
+  color: #000;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .btn:hover {
+  color: #fff;
   border-width: 0.1rem;
   border-color: #0088ff;
   border-style: solid;
@@ -161,18 +165,8 @@ li {
   border-radius: 10rem;
   cursor: pointer;
   background-color: #0088ff;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.info-btn {
-  color: #000;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.btn:hover .info-btn {
-  color: #fff;
   transition: color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* offer section styles */

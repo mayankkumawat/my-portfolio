@@ -8,6 +8,7 @@ import { Constants } from '@/constants/constants';
 import profilePic from '../assets/profilepic.jpeg';
 
 const InfoSection = () => {
+  const handleClickGithub = () => window.open(Constants.LINKS.github, '_blank');
   return (
     <div className="info-container">
       <div className="info">
@@ -32,24 +33,15 @@ const InfoSection = () => {
           specifications.
         </p>
         <div className="btn-container">
-          <div className="btn">
-            <p className={`info-btn ${cabin.className}`}>Resume</p>
-          </div>
-          <div className="btn">
-            <p className={`info-btn ${cabin.className}`}>Meet</p>
-          </div>
-          <div className="btn">
-            <p className={`info-btn ${cabin.className}`}>Contact</p>
-          </div>
-          <div className="btn">
-            <a
-              target="_blank"
-              href={Constants.LINKS.github}
-              className={`info-btn ${cabin.className}`}
-            >
-              Github
-            </a>
-          </div>
+          <button className={`btn ${cabin.className}`}>Resume</button>
+          <button className={`btn ${cabin.className}`}>Meet</button>
+          <button className={`btn ${cabin.className}`}>Contact</button>
+          <button
+            className={`btn ${cabin.className}`}
+            onClick={handleClickGithub}
+          >
+            Github
+          </button>
         </div>
       </div>
       <div className="profile-container">
